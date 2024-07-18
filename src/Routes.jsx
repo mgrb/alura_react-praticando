@@ -1,5 +1,9 @@
 function App() {
-  return <>TEste</>;
+  return (
+    <>
+      <h1>Olá Mundo!</h1>
+    </>
+  );
 }
 
 export default App;
