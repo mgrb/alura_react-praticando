@@ -1,14 +1,13 @@
 import Cabecalho from "@/components/Cabecalho";
 import styles from "./Home.module.css";
 import Rodape from "@/components/Rodape";
+import Banner from "@/components/Banner";
 
 export function Home() {
   return (
     <>
       <Cabecalho />
-      <main className={styles.main}>
-        <h1>Home</h1>
-      </main>
+      <Banner imagem="home" />
       <Rodape />
     </>
   );
