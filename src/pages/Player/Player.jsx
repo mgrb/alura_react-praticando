@@ -17,14 +17,12 @@ export function Player() {
   if (!video) return <NaoEncontrada />;
   return (
     <PaginaPadrao banner="player" titulo={video.titulo}>
-      <section className={styles.container}>
-        <iframe
-          src={video.link}
-          title={video.titulo}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-      </section>
+      <iframe
+        src={video.link}
+        title={video.titulo}
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
     </PaginaPadrao>
   );
 }
