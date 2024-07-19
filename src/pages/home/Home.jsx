@@ -1,8 +1,17 @@
 import Card from "@/components/Card";
 import PaginaPadrao from "@/components/PaginaPadrao";
-import videos from "@/json/db.json";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export function Home() {
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/videos")
+      .then((videoServerResponse) => videoServerResponse.json())
+      .then((responseData) => setVideos(responseData));
+  }, []);
+
   return (
     <PaginaPadrao
       banner="home"
