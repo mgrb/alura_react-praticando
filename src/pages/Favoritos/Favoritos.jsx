@@ -1,9 +1,13 @@
-import styles from "./Favoritos.module.css";
+import Card from "@/components/Card";
+import PaginaPadrao from "@/components/PaginaPadrao";
+import videos from "@/json/db.json";
 
 export function Favoritos() {
   return (
-    <div className={styles.favoritos}>
-      <h1>Favoritos</h1>
-    </div>
+    <PaginaPadrao titulo="Meus Favoritos" banner="favoritos">
+      {videos.map((video) => (
+        <Card key={video.id} {...video} />
+      ))}
+    </PaginaPadrao>
   );
 }
